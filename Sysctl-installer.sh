@@ -9,7 +9,6 @@ echo "######################################"
 yum install git -y > /dev/null 2>&1
 cd /opt
 git clone https://github.com/Adepurnomo/Sysctl.git
-
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 \cp /opt/Sysctl/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
@@ -26,5 +25,5 @@ echo "${hijau}######################"
 tuned-adm list 
 tuned-adm active
 echo "${hijau}################################"
-echo "${hijau}Done"
+echo "${hijau}Done, Please restart your server"
 echo "${hijau}################################"
