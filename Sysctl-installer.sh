@@ -14,7 +14,7 @@ mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
 rm -rf /opt/Sysctl > /dev/null 2>&1
 sleep 3
-/bin/sysctl -P 
+/bin/sysctl -p 
 sleep 5
 echo "${hijau}######################"
 echo "${hijau}Checking tuned-adm"
