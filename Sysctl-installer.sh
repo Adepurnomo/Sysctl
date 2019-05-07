@@ -11,9 +11,9 @@ cd /opt
 git clone https://github.com/Adepurnomo/Sysctl.git
 
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
-\cp /opt/sysctl/sysctl.conf /etc/ > /dev/null 2>&1
+\cp /opt/Sysctl/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
-/bin/rm -rf /opt/sysctl > /dev/null 2>&1 
+/bin/rm -rf /opt/Sysctl > /dev/null 2>&1 
 /bin/sysctl  -P 
 sleep 5
 clear
