@@ -12,6 +12,7 @@ git clone -b https://github.com/Adepurnomo/Sysctl.git
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 \cp /opt/sysctl/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
+/bin/rm -rf /opt/sysctl > /dev/null 2>&1 
 
 echo "${hijau}######################"
 echo "${hijau}Checking tuned-adm"
@@ -22,5 +23,5 @@ echo "${hijau}######################"
 /bin/tuned-adm list 
 /bin/tuned-adm active
 echo "${hijau}################################"
-echo "${hijau}Done, Please restrat your server"
+echo "${hijau}Done"
 echo "${hijau}################################"
