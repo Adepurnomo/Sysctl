@@ -4,10 +4,11 @@ hijau=$(tput setaf 2)
 echo "${hijau}######################################"
 echo "${hijau}Please run this scripts on SU"
 echo "######################################"
-
+echo "${hijau}Working....."
+echo "######################################"
 yum install git -y > /dev/null 2>&1
 cd /opt
-git clone -b https://github.com/Adepurnomo/Sysctl.git
+git clone https://github.com/Adepurnomo/Sysctl.git
 
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 \cp /opt/sysctl/sysctl.conf /etc/ > /dev/null 2>&1
