@@ -9,7 +9,7 @@ echo "######################################"
 curl -o /opt/sysctl.conf https://raw.githubusercontent.com/Adepurnomo/Sysctl/master/sysctl.conf
 chmod a+x /opt/sysctl.conf
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
-\cp /opt/Sysctl/sysctl.conf /etc/ > /dev/null 2>&1
+\cp /opt/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
 rm -rf /opt/Sysctl > /dev/null 2>&1
 sleep 3
