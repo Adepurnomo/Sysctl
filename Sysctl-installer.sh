@@ -6,16 +6,15 @@ echo "${hijau}Please run this scripts on SU"
 echo "######################################"
 echo "${hijau}Working....."
 echo "######################################"
-yum install git -y > /dev/null 2>&1
-cd /opt
-git clone https://github.com/Adepurnomo/Sysctl.git
+curl -o /opt/sysctl.conf https://raw.githubusercontent.com/Adepurnomo/Sysctl/master/sysctl.conf
+chmod a+x /opt/sysctl.conf
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 \cp /opt/Sysctl/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
 rm -rf /opt/Sysctl > /dev/null 2>&1
 sleep 3
 sysctl -p 
-sleep 5
+sleep 3
 echo "${hijau}######################"
 echo "${hijau}Checking tuned-adm"
 echo "${hijau}######################"
