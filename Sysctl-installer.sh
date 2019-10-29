@@ -7,17 +7,17 @@ echo "######################################"
 echo "${hijau}Working....."
 echo "######################################"
 curl -o /opt/sysctl.conf https://raw.githubusercontent.com/Adepurnomo/Sysctl/master/sysctl.conf
-chmod a+x /opt/sysctl.conf
 mv /etc/sysctl.conf /etc/sysctl.conf-original > /dev/null 2>&1
 \cp /opt/sysctl.conf /etc/ > /dev/null 2>&1
 /bin/chmod a+x /etc/sysctl.conf
-rm -rf /opt/Sysctl > /dev/null 2>&1
+rm -rf /opt/* > /dev/null 2>&1
 sleep 3
 sysctl -p 
 sleep 3
 echo "${hijau}######################"
 echo "${hijau}Checking tuned-adm"
 echo "${hijau}######################"
+echo "${hijau} for rhel 6 ignore error"
 /bin/systemctl status tuned.service
 /bin/systemctl restart tuned.service
 /bin/systemctl enable tuned.service
